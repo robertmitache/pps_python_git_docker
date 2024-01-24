@@ -1,9 +1,14 @@
 # bayeta.py
+import random
 
 def frotar(n_frases: int = 1) -> list:
-	# Frase auspiciosa que se repetirá
-	frase_auspiciosa = "Hola Mundo"
 
-	# Devolver la lista con la frase repetida N veces
-	return [frase_auspiciosa] * n_frases
+	# Cargar frases desde el fichero frases.txt
+	with open('frases.txt', 'r') as file:
+		frases_auspiciosas = [line.strip() for line in file]
 
+	# Elegir N frases aleatorias
+	frases_elegidas = random.sample(frases_auspiciosas, n_frases)
+
+	# Devolver la lista de frases
+	return frases_elegidas
