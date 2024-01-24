@@ -1,5 +1,4 @@
-# app.py
-
+#app.py
 from bayeta import frotar
 
-print("Hola, mundo")
+print(frotar(3)) # Imprimir 3 frases auspiciosas
