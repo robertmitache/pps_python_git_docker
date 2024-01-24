@@ -1,28 +1,42 @@
 # La Bayeta de la Fortuna
 
-Esta aplicación web sencilla, inspirada en la tradición de las galletas de la fortuna, proporciona un mensaje auspicioso aleatorio cada vez que se accede a la web. ¡Descubre tu mensaje de buena suerte hoy!
+La Bayeta de la Fortuna es una aplicación web sencilla que proporciona frases auspiciosas de manera aleatoria cada vez que accedes a la página.
 
-## Instrucciones 
+## Funcionalidades
 
-1. Accede a la web.
-2. Recibe tu mensaje de la bayeta de la fortuna.
-3. ¡Disfruta de la buena suerte!
+- Muestra un saludo simple en la página principal.
+- Proporciona frases auspiciosas en la ruta `/frotar/<n_frases>` en formato JSON.
 
-## Desarrollo
+## Instrucciones de Ejecución 
 
-Este proyecto utiliza Python, Git y Docker para su desarrollo y despliegue
+1. Asegúrate de tener Python instalado.
+2. Crea y activa un entorno virtual (opcional, pero recomendado).
+3. Instala las dependencias con `pip install -r requirements.txt`.
+4. Ejecuta la aplicación con `python app.py`.
+5. Accede a `http://localhost:5000` en tu navegador.
 
-## Resolución de Dependencias
+## Endpoints
 
-Para garantizar un entorno de ejecución consistente, sigue estos pasos para configurar y ejecutar la aplicación:
+- `/`: Página principal con un saludo.
+- `/frotar/<n_frases>`: Obtiene `n_frases` frases auspiciosas.
 
-1. Crea un entorno entorno virtual de Python utilizando 'python -m venv venv'.
-2. Activa el entorno virtual:
-	- En sistemas basados en Unix (Linux y macOS):
-		source venv/bin/activate
-	- En sistemas Windows:
-		.\venv\Scripts\activate
-3. Instala las dependencias utilizando:
-	pip install -r requirements.txt
-4. Ejecuta la aplicación con:
-	python app.py
+## Contribuciones
+
+Para este gran proyecto ha colaborado mi gran amigo Rafael Ibáñez Durán!!
+
+## Notas de la Versión
+
+### Versión 1.0
+
+- Saludo en la página principal.
+- Frases auspiciosas en formato JSON.
+
+
+### Version 2.0
+
+- Mejoras en la presentación.
+- INtegración con Docker (próximamente).
+
+---
+
+*Proyecto desarrollado como parte de la práctica de Puesta en Producción Segura "La Bayeta de la Fortuna".*
