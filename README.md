@@ -10,9 +10,10 @@ La Bayeta de la Fortuna es una aplicación web sencilla que proporciona frases a
 ## Ejecución con Docker Compose
 
 1. Asegúrate de tener Docker y Docker Compose instalado en tu máquina.
-2. Crea y ejecuta los servicios de Docker utilizando el siguiente comando en la raíz del proyecto: `docker-compose up-d`.
+2. Crea una red de Docker ejecutando el siguiente comando en la raíz del proyecto: `docker network create bayeta-network`.
+3. Crea y ejecuta los servicios de Docker utilizando el siguiente comando en la raíz del proyecto: `docker-compose up-d`.
 	- Esto construirá las imágenes y ejecutará los contenedores para la aplicación y MongoDB en segundo plano.
-3. Accede a `http://localhost:5000` en tu navegador.
+4. Accede a `http://localhost:5000` en tu navegador.
 
 
 ## Endpoints
