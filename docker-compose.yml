@@ -16,7 +16,12 @@ services:
       - "27017:27017"
     networks:
       - bayeta-network
+    volumes:
+      - mongo-data:/data/db
 
 networks:
   bayeta-network:
     external: true
+
+volumes:
+  mongo-data:
