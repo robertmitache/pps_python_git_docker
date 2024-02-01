@@ -1,6 +1,10 @@
 #app.py
 from bayeta import frotar
+from mongodb_script import inicializar
 from flask import Flask, jsonify
+
+# Llamada a la función inicializar para asegurar datos en la base de datos
+inicializar('frases.txt')
 
 app = Flask(__name__)
 
