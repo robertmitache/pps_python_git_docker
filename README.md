@@ -7,14 +7,12 @@ La Bayeta de la Fortuna es una aplicación web sencilla que proporciona frases a
 - Muestra un saludo simple en la página principal.
 - Proporciona frases auspiciosas en la ruta `/frotar/<n_frases>` en formato JSON.
 
-## Ejecución con Docker
+## Ejecución con Docker Compose
 
-1. Asegúrate de tener Docker instalado en tu máquina.
-2. Crea una red de Docker ejecutando `docker network create bayeta-network`.
-3. Construye la imagen Docker ejecutando el siguiente comando en la raíz del proyecto: `docker build -t bayeta-fortuna .`
-4. Ejecuta el contenedor de MongoDB en la red que acabas de crear con el siguiente comando: `docker run -d --name mongo-bayeta --network bayeta-network mongo:latest`. Esto iniciará el contenedor de MongoDB en segundo plano y lo conectará a la red de Docker.
-5. Ejecuta el contenedor de la aplicación en la misma red con el siguiente comando: `docker run -d --name bayeta-app -p 5000:5000 --network bayeta-network bayeta-fortuna`. Esto iniciara la aplicación y la conectará al contenedor de MongoDB.
-6. Accede a `http://localhost:5000` en tu navegador.
+1. Asegúrate de tener Docker y Docker Compose instalado en tu máquina.
+2. Crea y ejecuta los servicios de Docker utilizando el siguiente comando en la raíz del proyecto: `docker-compose up-d`.
+	- Esto construirá las imágenes y ejecutará los contenedores para la aplicación y MongoDB en segundo plano.
+3. Accede a `http://localhost:5000` en tu navegador.
 
 
 ## Endpoints
@@ -28,9 +26,10 @@ Para este gran proyecto ha colaborado mi gran amigo Rafael Ibáñez Durán!!
 
 ## Notas de la Versión
 
-### Versión 1.4
+### Versión 1.5
 
-- Implementación de base de datos MongoDB para almacenar y recuperar frases auspiciosas.
-- Mejoras en la gestión de redes Docker para facilitar la escalabilidad y la integración con servicios externos.
+- Actualización a MongoDB 4.4 para mejorar la compatibilidad con diferentes sistemas.
+- Simplificación de la ejecución mediante Docker Compose para facilitar el despliegue.
+- Correcciones y mejoras generales en la aplicación.
 
 *Proyecto desarrollado como parte de la práctica de Puesta en Producción Segura "La Bayeta de la Fortuna".*

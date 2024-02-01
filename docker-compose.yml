@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  bayeta-fortuna:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    networks:
+      - bayeta-network
+
+  mongo:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    networks:
+      - bayeta-network
+
+networks:
+  bayeta-network:
+    external: true
