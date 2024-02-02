@@ -18,8 +18,18 @@ La Bayeta de la Fortuna es una aplicación web sencilla que proporciona frases a
 
 ## Endpoints
 
-- `/`: Página principal con un saludo.
+- `/`: Página principal con unas foto aleatoria y una frase auspiciosa aleatoria.
 - `/frotar/<n_frases>`: Obtiene `n_frases` frases auspiciosas.
+- `/frotar/add` (Método POST): Permite agregar nuevas frases auspiciosas. Envía un JSON con el siguiente formato:
+
+	```json
+	{
+		"frases": [
+			"Nueva frase 1",
+			"Nueva frase 2",
+			"Nueva frase 3"
+		]
+	}
 
 ## Contribuciones
 
@@ -27,10 +37,10 @@ Para este gran proyecto ha colaborado mi gran amigo Rafael Ibáñez Durán!!
 
 ## Notas de la Versión
 
-### Versión 1.5
+### Versión 1.7
 
-- Actualización a MongoDB 4.4 para mejorar la compatibilidad con diferentes sistemas.
-- Simplificación de la ejecución mediante Docker Compose para facilitar el despliegue.
-- Correcciones y mejoras generales en la aplicación.
+- Nuevo endpoint `/frotar/add` para agregar frases auspiciosas.
+- Diversas mejoras y correcciones en la aplicación.
+- Modificación de página principal `/` con una foto aleatoria y una frase auspiciosa aleatoria.
 
 *Proyecto desarrollado como parte de la práctica de Puesta en Producción Segura "La Bayeta de la Fortuna".*

@@ -10,6 +10,5 @@ FROM python:3.11.7-slim AS runner
 WORKDIR /app
 COPY --from=builder /app/venv /app/venv
 COPY . .
-COPY wait-for-mongo.sh /app/wait-for-mongo.sh
 
 CMD ["venv/bin/python", "app.py"]

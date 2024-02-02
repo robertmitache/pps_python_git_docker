@@ -1,3 +1,4 @@
+# mongodb_script.py
 from pymongo import MongoClient
 
 def instanciar():
@@ -13,8 +14,11 @@ def instanciar():
 	return cliente_mongo, frases_auspiciosas
 
 def add(frases, frases_auspiciosas):
+	# Convertimos cada elemento en un dict
+	frases_dict = [{"frase": frase} for frase in frases]
+
 	# Inserción de datos
-	frases_auspiciosas.insert_many(frases)
+	frases_auspiciosas.insert_many(frases_dict)
 
 def inicializar(file_path):
 	# Instanciación
